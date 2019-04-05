@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="50.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.sample.Battle">
+   <center>
+      <HBox alignment="CENTER" prefHeight="322.0" prefWidth="243.0" BorderPane.alignment="CENTER">
+         <children>
+            <Region prefHeight="322.0" prefWidth="106.0" />
+            <VBox fx:id="playerField" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox fx:id="playerFieldHbox" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="displayPlayer" fitHeight="112.0" fitWidth="168.0">
+                           <image>
+                              <Image url="@Player Battler/Battle Start/Frame001.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Region prefHeight="26.0" prefWidth="168.0" />
+               </children>
+            </VBox>
+            <Region prefHeight="359.0" prefWidth="103.0" />
+            <Region prefHeight="359.0" prefWidth="102.0" />
+            <VBox fx:id="monsterField2" alignment="CENTER" prefHeight="364.0" prefWidth="33.0">
+               <children>
+                  <Region prefHeight="25.0" prefWidth="100.0" />
+                  <ImageView fx:id="monster2" fitWidth="26.0" onMousePressed="#sAniStart" onMouseReleased="#sAniEnd" />
+                  <Text fx:id="displayMHP2" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="53.21875">
+                     <font>
+                        <Font name="Chalkboard" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <VBox fx:id="monsterField" alignment="CENTER">
+               <children>
+                  <Region prefHeight="25.0" prefWidth="100.0" />
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fx:id="playerattackend" fitHeight="112.0" fitWidth="168.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fx:id="monster" fitHeight="112.0" fitWidth="145.0" onMousePressed="#sAniStart">
+                                 <image>
+                                    <Image url="@Enemy Battlers/Slime001.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="displayMHP" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="93.21875">
+                                 <font>
+                                    <Font name="Chalkboard" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox fx:id="monsterField3" alignment="CENTER" prefHeight="364.0" prefWidth="33.0">
+               <children>
+                  <Region prefHeight="25.0" prefWidth="100.0" />
+                  <Text fx:id="displayMHP3" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="53.21875">
+                     <font>
+                        <Font name="Chalkboard" size="13.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="monster3" fitWidth="26.0" onMousePressed="#sAniStart" onMouseReleased="#sAniEnd" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="33.0" fitWidth="38.0">
+               <image>
+                  <Image url="@Stage/Heart.jpg" />
+               </image>
+               <effect>
+                  <Blend />
+               </effect>
+            </ImageView>
+            <Text fx:id="maxHP" fill="#139030" strokeType="INSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="57.21875">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="|">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Text fx:id="currentHP" fill="#139030" strokeType="INSIDE" strokeWidth="0.0" wrappingWidth="57.21875">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+            <Region prefHeight="28.0" prefWidth="79.0" />
+            <ImageView fitHeight="33.0" fitWidth="32.0">
+               <image>
+                  <Image url="@Stage/Gold.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="displayGold" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="62.21875">
+               <font>
+                  <Font name="Chalkboard SE Light" size="23.0" />
+               </font>
+            </Text>
+            <Region prefHeight="0.0" prefWidth="133.0" />
+            <ImageView fitHeight="33.0" fitWidth="31.0">
+               <image>
+                  <Image url="@Stage/Stamina.png" />
+               </image>
+            </ImageView>
+            <HBox prefHeight="9.0" prefWidth="77.0" />
+            <Text fx:id="displayStamina" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Chalkboard" size="25.0" />
+               </font>
+            </Text>
+            <Region prefHeight="33.0" prefWidth="151.0" />
+            <Text fx:id="displayStage" strokeType="OUTSIDE" strokeWidth="0.0" text="STAGE" wrappingWidth="123.21875">
+               <font>
+                  <Font name="Chalkboard" size="24.0" />
+               </font>
+            </Text>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <right>
+      <VBox alignment="TOP_RIGHT" spacing="35.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="71.0" spacing="10.0">
+               <children>
+                  <ImageView fx:id="playerInfo" fitHeight="35.0" fitWidth="32.0" onMousePressed="#displayInfo" preserveRatio="true">
+                     <image>
+                        <Image url="@Stage/Status.png" />
+                     </image>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Player Info">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="71.0" spacing="10.0">
+               <children>
+                  <ImageView fx:id="petInfoo" fitHeight="35.0" fitWidth="32.0">
+                     <image>
+                        <Image url="@Stage/Pet.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pet Info">
+                     <font>
+                        <Font name="Chalkboard" size="17.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="71.0" spacing="10.0">
+               <children>
+                  <ImageView fx:id="openStore" fitHeight="35.0" fitWidth="32.0">
+                     <image>
+                        <Image url="@Stage/Store.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Store">
+                     <font>
+                        <Font name="Chalkboard" size="17.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="71.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="35.0" fitWidth="32.0">
+                     <image>
+                        <Image url="@Stage/Chest.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Storage">
+                     <font>
+                        <Font name="Chalkboard" size="17.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="battleText" fill="#2f2b2b" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Chalkboard SE Light" size="26.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
